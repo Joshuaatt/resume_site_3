@@ -3,7 +3,21 @@ lock '3.3.5'
 
 set :application, 'resume_site_3'
 set :repo_url, 'https://github.com/Joshuaatt/resume_site_3'
+set :deploy_to, "/var/www/joshuaatteberry.com"
 set :branch, 'master'
+set :scm, :git
+set :branch, "master"
+set :user, "joshuaat"
+set :group, "deployers"
+set :use_sudo, false
+set :deploy_via, :copy
+set :ssh_options, { :forward_agent => true, :port => 4321 }
+set :rails_env, "production"
+set :keep_releases, 2
+
+default_run_options[:pty] = true
+
+server "www.joshuaatteberry.com", :app, :web, :db, :primary => true
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
