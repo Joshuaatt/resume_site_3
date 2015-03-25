@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem "paperclip", "~> 4.2"
 gem 'devise'
+gem 'capistrano', '~> 3.3.0'
 
 
 group :development do
@@ -17,6 +18,7 @@ group :development do
   gem 'web-console'
   gem 'spring'
   gem 'quiet_assets'
+  gem 'capistrano-rails', '~> 1.1.1'
 end
 
 group :test, :development do
