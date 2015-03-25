@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Source+Code+Pro:200,400,600' rel='stylesheet' type='text/css'>
+  <title>Joshua Atteberry</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="seperation-border">
+    <div id="title">
+      <span id="my-name"><a href="index.html">Joshua Atteberry</a></span>
+      <span id="my-title"><a href="index.html">Web Developer</a></span>
+    </div>
+
+    <ul class="nav">
+      <li><%= link_to "Skills", skills_path %></li>
+      <li><%= link_to "About", about_index_path %></li>
+      <li><%= link_to "Contact", contact_index_path %></li>
+    </ul>
+  </header>
+
+<%= yield %>
+
+  <footer>
+    <p>&copy; 2015 Joshua Atteberry.</p>
+  </footer>
+</body>
+</html>
